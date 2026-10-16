@@ -12,9 +12,8 @@ const photosPath = path.join(
 );
 
 // Apna username aur password set karo
-const USERNAME = "family";
-const PASSWORD = "shayan!";
-
+const USERNAME = process.env.GALLERY_USER;
+const PASSWORD = process.env.GALLERY_PASS;
 // Password ke baghair gallery nahi khulegi
 app.use((req, res, next) => {
   const auth = req.headers.authorization;
