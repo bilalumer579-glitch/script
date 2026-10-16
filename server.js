@@ -111,6 +111,6 @@ app.get("/", (req, res) => {
 
 app.use("/photos", express.static(photosPath, { index: false }));
 
-app.listen(3000, "127.0.0.1", () => {
+app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
   console.log("Gallery ready at http://127.0.0.1:3000");
 });
